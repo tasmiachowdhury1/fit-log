@@ -21,7 +21,7 @@ const Navbar = () => {
 
                 <div className="absolute left-1/2 -translate-x-1/2 items-center hidden gap-2 lg:flex">
 
-                    <Link href="/" className='rounded-full bg-(--primary-soft) px-4 py-1 text-[15px] font-medium text-(--primary-dark) hover:text-white'>Workouts</Link>
+                    <Link href="/" className='rounded-full bg-(--webpage-btn) px-4 py-1 text-[15px] font-medium text-(--primary-dark) hover:text-white'>Workouts</Link>
                     <Link href="/my-plan" className='text-[15px] font-medium text-(--purple) transition hover:text-white'>My plan</Link>
 
                 </div>
@@ -31,7 +31,7 @@ const Navbar = () => {
 
                 </div>
                 <div className="hidden items-center lg:flex gap-2">
-                    <Link href="/my-plan" className='flex items-center gap-1 text-[15px] text-(--purple)'>Plan <span className='flex h-5 min-w-5 items-center justify-center rounded-full bg-(--primary-soft) px-1.5 text-[12px] font-semibold text-(--primary-dark)'>0</span></Link>
+                    <Link href="/my-plan" className='flex items-center gap-1 text-[15px] text-(--purple)'>Plan <span className='flex h-5 min-w-5 items-center justify-center rounded-full bg-(--webpage-btn) px-1.5 text-[12px] font-semibold text-(--primary-dark)'>0</span></Link>
                     <Link href="/my-plan" className='flex items-center gap-1.5 text-[15px] text-(--purple)'>Saved <span className='flex h-5 min-w-5 items-center justify-center rounded-full border border-(--primary-dark) px-1.5 text-[12px] font-semibold text-(--purple)'>0</span></Link>
                 </div>
                 <button type="button"
@@ -43,7 +43,7 @@ const Navbar = () => {
                 <div className='border-t border-[#272b33] px-4 py-4 lg:hidden'>
                     <div className="mx-auto flex max-w-7xl flex-col gap-2">
                         <Link href="/"
-                            onClick={() => setMenuOpen(false)} className='rounded-full bg-(--primary-soft) px-4 py-1 text-[15px] font-medium text-(--primary-dark) hover:text-white'>Workouts</Link>
+                            onClick={() => setMenuOpen(false)} className='rounded-full bg-(--webpage-btn) px-4 py-1 text-[15px] font-medium text-(--primary-dark) hover:text-white'>Workouts</Link>
 
                         <Link href="/my-plan"
                             onClick={() => setMenuOpen(false)}
@@ -55,7 +55,7 @@ const Navbar = () => {
                             className="flex items-center gap-2 text-[15px] text-(--purple)"
                         >
                             Plan
-                            <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-(--primary-soft) px-1.5 text-[12px] font-semibold text-(--primary-dark)">
+                            <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-(--webpage-btn) px-1.5 text-[12px] font-semibold text-(--primary-dark)">
                                 0
                             </span>
                         </Link>

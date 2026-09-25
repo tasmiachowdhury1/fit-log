@@ -3,12 +3,14 @@
 
 :root {
   --background: #fce6f0;
-  --card: #ffb5df;
+  --card: #faafda;
   --border: #f379c6;
+  --webpage-btn: #f7dfed;
+  --badges: #f87ab3;
 
-  --primary: #f1a6cd;
+  --primary: #f18ac0;
   --primary-dark: #db2777;
-  --primary-soft: #facde7;
+  --primary-soft: #f7cce5;
 
 
   --purple: #a855f7;

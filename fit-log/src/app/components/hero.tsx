@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
     return (
-        <section className=" max-w-7xl mx-auto bg-(--background)">
+        <section className="mt-10 max-w-[1600px] mx-auto bg-(--primary-soft) rounded-2xl">
             <div className=" grid items-center gap-12 px-6 py-16 sm:px-8 grid-cols-2 lg:px-8 md:py-24">
                 <div>
                     <p className="text-sm font-semibold text-(--primary-dark)">
