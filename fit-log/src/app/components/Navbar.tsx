@@ -55,7 +55,7 @@ const Navbar = () => {
                             className="flex items-center gap-2 text-[15px] text-(--purple)"
                         >
                             Plan
-                            <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-(--primary) px-1.5 text-[12px] font-semibold text-(--primary-dark)">
+                            <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-(--primary-soft) px-1.5 text-[12px] font-semibold text-(--primary-dark)">
                                 0
                             </span>
                         </Link>

@@ -2,7 +2,7 @@
 @plugin "daisyui";
 
 :root {
-  --background: #fff7fc;
+  --background: #fce6f0;
   --card: #ffb5df;
   --border: #f379c6;
 
@@ -12,7 +12,7 @@
 
 
   --purple: #a855f7;
-  --purple-soft: #9946f1;
+  --purple-soft: #e6d0fd;
 
   --text: #3b1d35;
   --muted: #9b7a94;
