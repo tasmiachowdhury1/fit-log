@@ -9,10 +9,12 @@ export const getWorkouts = async (): Promise<Workout[]> => {
     return response.json()
 }
 export const getWorkoutById = async (id: string): Promise<Workout> => {
-    const response = await fetch(`${API_URL}/${id}`)
-
-    if (!response.ok) {
+    const workouts = await getWorkouts()
+    const workout = workouts.find(
+        (item) => String(item.id) === String(id)
+    )
+    if (!workout) {
         throw new Error("Workout not found")
     }
-    return response.json()
+    return workout
 }

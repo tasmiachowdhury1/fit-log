@@ -3,6 +3,7 @@ import { Oswald } from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import { WorkoutProvider } from "./context/WorkoutContext";
+import { Toaster } from "react-hot-toast";
 
 
 
@@ -26,6 +27,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <WorkoutProvider>
           <Navbar />
           {children}
+          <Toaster position="top-right" />
         </WorkoutProvider>
       </body>
 

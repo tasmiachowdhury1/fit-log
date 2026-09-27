@@ -24,7 +24,7 @@ const Navbar = () => {
                 <div className="absolute left-1/2 -translate-x-1/2 items-center hidden gap-2 lg:flex">
 
                     <Link href="/components" className='rounded-full bg-(--webpage-btn) px-4 py-1 text-[15px] font-medium text-(--primary-dark) hover:text-white'>Workouts</Link>
-                    <Link href="/my-plan" className='text-[15px] font-medium text-(--purple) transition hover:text-white'>My plan</Link>
+                    <Link href="/plan" className='text-[15px] font-medium text-(--purple) transition hover:text-white'>My plan</Link>
 
                 </div>
 
@@ -33,10 +33,10 @@ const Navbar = () => {
 
                 </div>
                 <div className="hidden items-center lg:flex gap-2">
-                    <Link href="/my-plan" className='flex items-center gap-1 text-[15px] text-(--purple)'>Plan <span className='flex h-5 min-w-5 items-center justify-center rounded-full bg-(--webpage-btn) px-1.5 text-[12px] font-semibold text-(--primary-dark)'>0</span></Link>
-                    <Link href="/my-plan" className='flex items-center gap-1.5 text-[15px] text-(--purple)'>Saved <span className='flex h-5 min-w-5 items-center justify-center rounded-full border border-(--primary-dark) px-1.5 text-[12px] font-semibold text-(--purple)'>0</span></Link>
+                    <Link href="/plan" className='flex items-center gap-1 text-[15px] text-(--purple)'>Plan <span className='flex h-5 min-w-5 items-center justify-center rounded-full bg-(--webpage-btn) px-1.5 text-[12px] font-semibold text-(--primary-dark)'>{plan.length}</span></Link>
+                    <Link href="/plan" className='flex items-center gap-1.5 text-[15px] text-(--purple)'>Saved <span className='flex h-5 min-w-5 items-center justify-center rounded-full border border-(--primary-dark) px-1.5 text-[12px] font-semibold text-(--purple)'>{saved.length}</span></Link>
                 </div>
-                <button type="button"
+                <button
                     onClick={() => setMenuOpen(!menuOpen)} className='flex h-9 w-9 items-center justify-center rounded-md border border-[#272b33] text-white lg:hidden cursor-pointer'
                     aria-label='Toggle menu'
                     aria-expanded={menuOpen}>{menuOpen ? "✕" : "☰"}</button>
@@ -47,12 +47,12 @@ const Navbar = () => {
                         <Link href="/"
                             onClick={() => setMenuOpen(false)} className='rounded-full bg-(--webpage-btn) px-4 py-1 text-[15px] font-medium text-(--primary-dark) hover:text-white'>Workouts</Link>
 
-                        <Link href="/my-plan"
+                        <Link href="/plan"
                             onClick={() => setMenuOpen(false)}
                             className="rounded-lg px-4 py-3 text-[15px] font-medium text-(--purple)  hover:text-white">My Plan
                         </Link>
                         <Link
-                            href="/my-plan"
+                            href="/plan"
                             onClick={() => setMenuOpen(false)}
                             className="flex items-center gap-2 text-[15px] text-(--purple)"
                         >
@@ -63,7 +63,7 @@ const Navbar = () => {
                         </Link>
 
                         <Link
-                            href="/my-plan"
+                            href="/plan"
                             onClick={() => setMenuOpen(false)}
                             className="flex items-center gap-1 text-[15px] text-(--purple)"
                         >
