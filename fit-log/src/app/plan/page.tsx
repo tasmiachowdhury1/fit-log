@@ -1,9 +1,9 @@
-"use client";
+"use client"
 import React from 'react'
 import { useWorkout } from '../context/WorkoutContext'
-import Link from 'next/link';
-import { useState } from 'react';
-import toast from "react-hot-toast";
+import Link from 'next/link'
+import { useState } from 'react'
+import toast from "react-hot-toast"
 
 const planPage = () => {
     const { plan, saved, removeFromPlan, removeFromSaveWorkout } = useWorkout()
@@ -43,17 +43,17 @@ const planPage = () => {
 
                 <div>
 
-                    <h1 className="mt-3 text-4xl font-bold text-(--primary-dark)">
+                    <h1 className="text-3xl font-bold text-(--primary-dark) sm:text-3xl">
                         MY PLAN
                     </h1>
 
-                    <p className="mt-3 text-(--purple)">
+                    <p className="mt-3 text-(--purple) text-[15px] sm:text-base">
                         Cap of five lifts for today. Finish them, then load more.
                     </p>
                 </div>
 
 
-                <div className="mt-10 grid grid-cols-3 rounded-2xl border-2 border-(--border) bg-(--card)">
+                <div className="mt-10 grid grid-cols-1 rounded-2xl border-2 border-(--border) bg-(--card) sm:grid-cols-3">
 
                     <div className="p-5">
                         <p className="text-[15px] text-pink-800">
@@ -113,16 +113,16 @@ const planPage = () => {
                                 Saved
                             </button>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex items-center gap-2 justify-between sm:justify-end">
 
-                            <span className="text-[16px] text-(--primary-dark)">
+                            <span className="text-[16px] text-(--primary-dark) sm:text-base">
                                 Sort By
                             </span>
 
                             <select
                                 value={sortBy}
                                 onChange={(e) => setSortBy(e.target.value)}
-                                className="rounded-lg border border-(--border) bg-(--card) px-4 py-2 text-[15px] text-white"
+                                className="rounded-lg border border-(--border) bg-(--card) px-3 py-2 text-[15px] text-white sm:px-4"
 
                             >
                                 <option value="duration">
@@ -170,7 +170,7 @@ const planPage = () => {
 
                                 <div
                                     key={workout.id}
-                                    className="flex items-center justify-between rounded-2xl border border-(--border) bg-(--card) p-3">
+                                    className="flex flex-col sm:flex-row  items-center justify-between rounded-2xl border border-(--border) bg-(--card) p-3">
 
                                     <div className="flex items-center gap-4">
 
@@ -224,7 +224,7 @@ const planPage = () => {
 
                                                 onClick={() => {
                                                     removeFromPlan(workout.id)
-                                                    toast.success(`${workout.name} marked as done!`);
+                                                    toast.success(`${workout.name} marked as done!`)
                                                 }}
                                                 className="cursor-pointer rounded-full bg-(--primary-dark) px-5 py-2 text-[15px] font-semibold text-white hover:bg-(--primary)"
                                             >
@@ -239,7 +239,7 @@ const planPage = () => {
                                                 <button
                                                     onClick={() => {
                                                         removeFromSaveWorkout(workout.id)
-                                                        toast.success(`${workout.name} removed from saved!`);
+                                                        toast.success(`${workout.name} removed from saved!`)
                                                     }}
                                                     className="cursor-pointer px-2 text-xl font-bold text-(--muted) hover:text-(--primary-dark)"
 

@@ -4,7 +4,7 @@ import Link from "next/link";
 const HeroSection = () => {
     return (
         <section className="mt-10 max-w-[1600px] mx-auto bg-(--primary-soft) rounded-2xl">
-            <div className=" grid items-center gap-12 px-6 py-16 sm:px-8 grid-cols-2 lg:px-8 md:py-24">
+            <div className=" grid grid-cols-1 md:grid-cols-2 items-center justify-between gap-12 px-6 py-16 sm:px-8 lg:px-8 md:py-24">
                 <div>
                     <p className="text-sm font-semibold text-(--primary-dark)">
                         WORKOUT LIBRARY
@@ -22,8 +22,8 @@ const HeroSection = () => {
                         className="mt-7 inline-block rounded-2xl bg-(--primary-dark) px-6 py-3 text-sm font-semibold  text-white hover:bg-(--primary)">BROWSE WORKOUTS
                     </Link>
                 </div>
-                <div className="relative flex justify-center lg:justify-end">
-                    <div className="relative h-full w-full max-w-md sm:h-95">
+                <div className="relative">
+                    <div className="relative h:64 ml-auto w-full max-w-md sm:h-95">
                         <Image
                             src="/banner.png"
                             alt="Working out"
