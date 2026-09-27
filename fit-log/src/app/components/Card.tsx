@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import { CardProps } from '../types/workout';
 
+
 const Card = ({ workout }: CardProps) => {
     return (
         <Link

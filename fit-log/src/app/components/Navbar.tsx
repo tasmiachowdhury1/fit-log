@@ -3,15 +3,17 @@ import React from 'react';
 import Image from 'next/image';
 import { useState } from "react";
 import Link from 'next/link';
+import { useWorkout } from '../context/WorkoutContext';
 
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false)
+    const { plan, saved } = useWorkout()
     return (
 
         <header className=' border-b border-(--border) bg-(--primary)'>
             <nav className='container mx-auto relative flex max-w-7xl items-center justify-between px-2 py-4 sm:px-6 lg:px-8'>
-                <Link href="/" className='flex items-center gap-2'>
+                <Link href="/components" className='flex items-center gap-2'>
                     <Image src="/logo.png" alt='Fit Log' width={20}
                         height={20}
                         className='h-6 w-6'
@@ -21,7 +23,7 @@ const Navbar = () => {
 
                 <div className="absolute left-1/2 -translate-x-1/2 items-center hidden gap-2 lg:flex">
 
-                    <Link href="/" className='rounded-full bg-(--webpage-btn) px-4 py-1 text-[15px] font-medium text-(--primary-dark) hover:text-white'>Workouts</Link>
+                    <Link href="/components" className='rounded-full bg-(--webpage-btn) px-4 py-1 text-[15px] font-medium text-(--primary-dark) hover:text-white'>Workouts</Link>
                     <Link href="/my-plan" className='text-[15px] font-medium text-(--purple) transition hover:text-white'>My plan</Link>
 
                 </div>
@@ -56,7 +58,7 @@ const Navbar = () => {
                         >
                             Plan
                             <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-(--webpage-btn) px-1.5 text-[12px] font-semibold text-(--primary-dark)">
-                                0
+                                {plan.length}
                             </span>
                         </Link>
 
@@ -67,7 +69,7 @@ const Navbar = () => {
                         >
                             Saved
                             <span className="flex h-5 min-w-5 items-center justify-center rounded-full border border-(--primary-dark) px-1.5 text-[12px] font-semibold text-(--purple)">
-                                0
+                                {saved.length}
                             </span>
                         </Link>
                     </div>

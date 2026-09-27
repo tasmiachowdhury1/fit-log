@@ -1,4 +1,4 @@
-export type CardProps = {
+export type Workout = {
     workout: {
         id: string | number
         name: string
@@ -14,4 +14,7 @@ export type CardProps = {
         description: string
         instructions: string[]
     }
+}
+export type CardProps = {
+    workout: Workout
 }
