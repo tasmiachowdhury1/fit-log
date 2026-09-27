@@ -26,12 +26,12 @@ const planPage = () => {
             return 0
         }
     )
-    const totalMin = plan.reduce(
+    const totalMin = workouts.reduce(
         (total, workout) => total + workout.duration,
         0
     )
 
-    const totalCal = plan.reduce(
+    const totalCal = workouts.reduce(
         (total, workout) => total + workout.caloriesBurned,
         0
     )
@@ -61,7 +61,7 @@ const planPage = () => {
                         </p>
 
                         <p className="mt-2 text-4xl font-bold text-(--primary-dark)">
-                            {plan.length}
+                            {workouts.length}
                         </p>
                     </div>
 
